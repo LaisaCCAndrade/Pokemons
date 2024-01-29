@@ -15,11 +15,6 @@ Bem-vindo ao Pokedex App! Este é um aplicativo web que permite explorar e compa
 - TypeScript
 - Styled Components
 
-## Capturas de Tela
-
-![Página Principal](./screenshots/home.png)
-![Detalhes do Pokémon](./screenshots/details.png)
-
 ## Como Rodar o Projeto
 
 1. **Clone este repositório:**
