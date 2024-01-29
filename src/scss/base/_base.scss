@@ -1,0 +1,66 @@
+@use 'sass:color';
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: black;
+}
+
+#root {
+  $accent-color: #f51313;
+  --accent-color-dark: color.scale($accent-color, $lightness: -30%);
+}
+
+button {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0.4rem;
+  &-thumb {
+    background-color: rgba(219, 219, 219, 0.557);
+  }
+}
+
+:root {
+  --underline-height: 4px;
+  --transition-duration: 0.5s;
+}
+
+.underline {
+  z-index: 10;
+  height: calc(var(--underline-height) / 2);
+  mix-blend-mode: initial;
+}
+
+.underline {
+  display: block;
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: 0;
+  height: var(--underline-height);
+  width: 20%;
+  pointer-events: none;
+  transition: transform var(--transition-duration) ease-in-out;
+
+  &:nth-child(1) {
+    transition: calc(var(--transition-duration) * 0.8);
+  }
+  &:nth-child(2) {
+    transition: calc(var(--transition-duration) * 1.2);
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
